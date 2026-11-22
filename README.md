@@ -4,6 +4,8 @@ React Hooks Starter Project를 바탕으로 useEffect와 useRef를 연습하는 
 
 시작 자료: https://github.com/2026-2-OSS/week12_starter_project
 
+과제 링크: https://github.com/2026-2-OSS/assign12-c02-22500693
+
 ##### 2 설치와 실행
 
 npm.cmd install
@@ -48,6 +50,7 @@ useState는 값이 바뀌면 화면을 다시 그리고 useRef.current는 바뀌
 
 ##### 7 배포
 
+https://week12-starter-project-zvpq.vercel.app/
 
 
 ##### 8 주간 정리
