@@ -1,25 +1,62 @@
-# OSS Week 12 — React Hooks Playground (Student Starter)
+##### 1 프로젝트 소개
 
-## 실행 방법
-Node.js 20.19+ 또는 22.12+ 권장. 프로젝트 폴더에서 실행:
+React Hooks Starter Project를 바탕으로 useEffect와 useRef를 연습하는 12주차 실습이다
 
-```bash
-npm install
-npm run dev
-```
+시작 자료: https://github.com/2026-2-OSS/week12_starter_project
 
-브라우저에 터미널의 Local URL을 열고 LAB 탭을 이동하세요. 제출 전 `npm run build`도 실행하세요.
+과제 링크: https://github.com/2026-2-OSS/assign12-c02-22500693
 
-## 수행 방법
-1. `src/components/` 아래의 LAB 1~4 파일에 있는 `TODO`를 직접 완성합니다.
-2. `src/App.jsx`, `src/App.css`는 공통 화면이므로 가급적 수정하지 않습니다.
-3. 각 LAB의 동작 화면과 콘솔 결과를 기록합니다.
-4. 한 LAB에서 다른 LAB으로 탭을 전환하면 기존 컴포넌트가 언마운트됩니다. Cleanup 결과를 관찰합니다.
+##### 2 설치와 실행
+
+npm.cmd install
+
+npm.cmd run dev
+
+![실습 1 화면](image.png)
+
+![실습 2 화면](image-1.png)
+
+![실습 3 화면](image-2.png)
+
+![실습 4 화면](image-3.png)
+
+##### 3 소스 코드 살펴보기
+
+App.jsx는 탭을, components는 실습 코드를, App.css는 화면 스타일
+
+주요 코드 1: 실습 1은 useEffect와 setInterval로 수를 올리고 함수형 업데이트로 최신 값을 사용하며 정리 함수로 타이머를 멈춘다
+
+주요 코드 2: 실습 3은 useRef.current로 입력창에 접근해 포커스를 주고 값을 지운다
+
+##### 4 실습 구현
+
+실습 1은 1초 타이머와 언마운트 정리, 실습 2는 running 상태에 따른 시작·정지·초기화, 실습 3은 입력 포커스와 지우기, 실습 4는 타이머 ID 저장과 중복 방지·정리를 구현했다
+
+##### 5 실습 비교
+
+의존성 배열은 Effect를 다시 실행할 조건을 정한다
+
+정리 함수가 없으면 타이머가 계속 실행되거나 중복될 수 있다
+
+useState는 값이 바뀌면 화면을 다시 그리고 useRef.current는 바뀌어도 화면을 다시 그리지 않는다
+
+실습 2는 running 상태에 따라 Effect가 타이머를 관리하고 실습 4는 참조값에 저장한 타이머 ID를 버튼에서 직접 관리한다
+
+##### 6 꾸미기
+
+제목과 색상을 바꿧다.
+
+수정 파일: App.jsx, App.css, index.html, Lab1_EffectTimer.jsx, Lab2_TimerControl.jsx, Lab3_InputFocus.jsx, Lab4_RefTimer.jsx, formatTimerTime.js
+
+##### 7 배포
+
+https://week12-starter-project-zvpq.vercel.app/
 
 
-## 이해도 확인 질문
-1. `setCount(prev => prev + 1)`은 왜 유용한가?
-2. `useEffect(fn, [])`과 `useEffect(fn)`은 어떻게 다른가?
-3. Cleanup은 언제 실행되는가? 개발 환경 StrictMode 영향은?
-4. `useState`와 `useRef`의 값 변경 시 렌더링 차이는?
-5. LAB 2와 LAB 4에서 Timer를 관리하는 방식의 차이는?
+##### 8 주간 정리
+
+새로 배운 점: 의존성 배열, 정리 시점, useState와 useRef의 차이
+
+어려웠던 점: 타이머 중복 방지 원리와 이유를 처음에는 이해하기 어려웠지만 AI 설명으로 정리했다
+
+AI 활용: PDF 요약, 코드 검토, 오류 원인 확인, 과제 내용 정리에 사용했고 직접 실행 확인도 필요하다고 느꼈다

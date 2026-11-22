@@ -20,8 +20,8 @@ export default function App() {
     <main className="page">
       <header className="hero">
         <p className="eyebrow">OPEN SOURCE STUDIO · WEEK 12</p>
-        <h1>React Hooks Playground</h1>
-        <p>useEffect · Cleanup · useRef — 4개의 독립된 Lab</p>
+        <h1>React Hooks Lab Studio</h1>
+        <p>Timer와 DOM Focus를 직접 구현하며 useEffect와 useRef를 익히는 4개의 실습</p>
       </header>
 
       <nav className="tabs" aria-label="실습 선택">
